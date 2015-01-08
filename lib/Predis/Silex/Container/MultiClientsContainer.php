@@ -12,8 +12,7 @@
 namespace Predis\Silex\Container;
 
 use BadMethodCallException;
-use Pimple;
-use Silex\Application;
+use Pimple\Container;
 
 /**
  * Specialized Pimple container tha makes it possible to define
@@ -21,7 +20,7 @@ use Silex\Application;
  *
  * @author Daniele Alessandri <suppakilla@gmail.com>
  */
-class MultiClientsContainer extends Pimple
+class MultiClientsContainer extends Container
 {
     protected $application;
     protected $prefix;
@@ -29,7 +28,7 @@ class MultiClientsContainer extends Pimple
     /**
      * {@inheritdoc}
      */
-    public function __construct(Application $app, $prefix)
+    public function __construct(Container $app, $prefix)
     {
         $this->application = $app;
         $this->prefix = $prefix;
