@@ -1,5 +1,5 @@
 {
-    "name": "predis/service-provider",
+    "name": "predis/service-provider-silex2",
     "type": "library",
     "description": "Predis service provider for the Silex microframework",
     "keywords": ["silex", "redis", "predis"],
